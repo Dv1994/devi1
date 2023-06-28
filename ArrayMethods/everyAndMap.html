@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.prototype.every() & map()</h1>
+    <script>
+        Array.prototype.allDivisibleBy = function (divisor){
+            return this.every(num => num % divisor === 0);
+        };
+        Array.prototype.incrementedArray =function(increment){
+            return this.map(num => num + increment);
+        };
+        const numbers = [10,20,30,40,50];
+        const allDivisibleBy10 = numbers.allDivisibleBy(10);
+        const incrementedArray = numbers.incrementedArray(5);
+        console.log(allDivisibleBy10);
+        console.log(incrementedArray);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.prototype.splice</h1>
+    <script>
+        Array.prototype.customSplice =function(start,deleteCount, ...items){
+            const removedItems = this.splice(start,deleteCount, ...items);
+            return removedItems;
+        }
+        const numbers = [1,2,3,4,5];
+        const removed = numbers.customSplice(2,2, 'a','b');
+
+        console.log(numbers);
+        console.log(removed);
+    </script>
+</body>
+</html>

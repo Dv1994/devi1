@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.prototype.every()</h1>
+    <script>
+        Array.prototype.allGreaterThan = function(value){
+            return this.every(num => num > value)
+        };
+        Array.prototype.allLessthan = function(value){
+            return this.every(num => num < value);
+        };
+        Array.prototype.filteredGreaterThan = function(value){
+            return this.filter(num => num > value);
+        };
+        Array.prototype.filteredLessThan = function(){
+            return this.filter(num => num < 30);
+        };
+        const numbers = [10,20,30,40,50];
+        const allGreaterThan30 = numbers.allGreaterThan(30);
+        const allLessthan30 = numbers.allLessthan(30);
+        const filteredArray = numbers.filteredGreaterThan(30);
+        const filteredArray2 = numbers.filteredLessThan(30);
+
+        console.log(allGreaterThan30);
+        console.log(allLessthan30);
+        console.log(filteredArray);
+        console.log(filteredArray2);
+    </script>
+</body>
+</html>
